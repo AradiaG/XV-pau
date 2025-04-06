@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitación XV Años - Paulina</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    .info {
+      margin: 40px auto;
+      max-width: 600px;
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .countdown {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #ff8ec7;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mis XV Años</h1>
+    <h2>Valeria Martínez</h2>
+  </header>
+
+  <div class="info">
+    <p>✨ Te invito a celebrar conmigo un día muy especial ✨</p>
+    <p><strong>Fecha:</strong> 10 de agosto de 2025</p>
+    <p><strong>Hora:</strong> 6:00 PM</p>
+    <p><strong>Lugar:</strong> Salón Jardines del Sol, Ciudad de México</p>
+
+    <div class="countdown" id="countdown"></div>
+
+    <a class="button" href="https://forms.gle/tu-link-de-confirmacion" target="_blank">
+      Confirmar Asistencia
+    </a>
+  </div>
+
+  <footer>
+    Con cariño, Valeria 💕
+  </footer>
+
+  <script>
+    // Cuenta regresiva
+    const eventDate = new Date("August 10, 2025 18:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "¡Ya comenzó la fiesta!";
+        clearInterval(countdownFunction);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
+    }, 1000);
+  </script>
+
+</body>
+</html>
