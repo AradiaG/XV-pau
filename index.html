@@ -57,32 +57,67 @@
 
     .info {
       margin: 40px auto;
-      min-height: 800px;
+      min-height: 1800px;
       max-width: 600px;
       background-color: rgba(255, 255, 255, 0.2); /* blanco con opacidad al 20% */
       border-radius: 20px;
-      padding: 30px;
+      padding-top: 60px;    /* Aumenta el espacio en la parte superior */
+      padding-right: 30px;
+      padding-bottom: 30px;
+      padding-left: 30px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       font-size: 30px;  /* Ajusta el tamaño del texto */
     }
 
-    .countdown {
-      font-size: 2em;
-      margin-top: 60px;
+        /* Estilo para el botón del mapa a recepción */
+    .btn-mapa {
+      display: inline-block;
+      background-color: #0e2f3a; /* Color de fondo verde */
+      color: rgb(255, 215, 0);
+      padding: 10px 20px;
+      margin: 20px 0;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
     }
-
+    .btn-mapa:hover {
+      background-color: #8a5ab7; /* Color de fondo verde más oscuro al pasar el cursor */
+    }
+    /* Estilo para el botón del mapa templo */
+    .btn-mapa1 {
+      display: inline-block;
+      background-color: #0e2f3a; /* Color de fondo verde */
+      color: rgb(255, 215, 0);
+      padding: 10px 20px;
+      margin: 20px 0;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .btn-mapa1:hover {
+      background-color: #45a049;
+    }
+    .division {
+      display: block;
+      width: 70%; /* Ajusta el ancho según tus necesidades */
+      max-width: 200px;
+      margin: 10px auto; /* Espacio alrededor de la imagen */
+    }
+    .countdown {
+      font-size: 1.6em;
+      margin-top: 20px;
+    }
     .button {
       margin-top: 70px;
       padding: 12px 24px;
       font-size: 1em;
-      background-color: #000000;
+      background-color: #0e2f3a;
       color: rgb(255, 215, 0);
       border: none;
       border-radius: 60px;
       cursor: pointer;
       text-decoration: none;
     }
-
     footer {
       margin-top: 50px;
       padding: 20px;
@@ -100,10 +135,23 @@
   <img src="images/Espada.png" alt="Espada" class="imagen-arriba-info">
   <div class="info">
     <p>✨ Te invito a celebrar conmigo ✨</p>
-    <p>✨ En un día muy especial ✨</p>
+    <p> En un día muy especial </p>
     <p><strong>Fecha:</strong> 19 de julio de 2025</p>
     <p><strong>Hora:</strong> 6:00 PM</p>
-    <p><strong>Lugar:</strong> Salón Jardines del Sol, Guadalajara, Jalisco.</p>
+    <img src="images/Division.png" alt="Division 1" class="division">
+    <p>Acompañame a dar gracias a Dios en la Parroquia de San José y Santo Tomás de Aquino </p>
+
+    <!-- Ubicación de templo -->
+    <a href="https://www.google.com/maps/place/Parroquia+de+San+Jos%C3%A9+y+Santo+Tom%C3%A1s+de+Aquino/@20.6509627,-103.3205538,18z/data=!4m14!1m7!3m6!1s0x8428b2312f8cd0af:0x98b0cd758f122f16!2sParroquia+de+San+Jos%C3%A9+y+Santo+Tom%C3%A1s+de+Aquino!8m2!3d20.6510302!4d-103.3205811!16s%2Fg%2F1td9f1y3" target="_blank" class="btn-mapa1">
+      Ver en el mapa
+    </a>
+
+    <img src="images/Division.png" alt="Division 1" class="division">
+    <p>Más tarde, bailemos un cumbión juntos</p>
+    <!-- Ubicación de Recepción -->
+    <a href="https://www.google.com/maps/search/?api=1&query=20.652810296842333,-103.31399378895281" target="_blank" class="btn-mapa">
+      Ver el mapa
+    </a>
 
     <div class="countdown" id="countdown"></div>
 
