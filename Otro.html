@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitación XV Años - Paulina</title>
+  <link rel="icon" type="image/png" href="images/Favicon.png">
+
+  <style>
+    @font-face {
+      font-family: 'Triforce';
+      src: url('fonts/Triforce.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Triforce', 'triforce';
+      background-image: url('images/Fondo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #dbb21c;
+      text-align: center;
+    }
+
+    /* Portada */
+    #portada {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      cursor: pointer;
+    }
+
+    #portada img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Contenido oculto al principio */
+    #contenido {
+      display: none;
+    }
+
+    header {
+      padding: 60px 20px 20px;
+    }
+
+    .logo {
+      width: 150px;
+      max-width: 100%;
+      margin-bottom: 0px;
+    }
+
+    h1 {
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-top: 10px;
+    }
+
+    .imagen-arriba-info {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: -118px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .info {
+      margin: 40px auto;
+      min-height: 1800px;
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 60px 30px 30px 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 30px;
+    }
+
+    .btn-mapa, .btn-mapa1 {
+      display: inline-block;
+      background-color: #0e2f3a;
+      color: rgb(255, 215, 0);
+      padding: 10px 20px;
+      margin: 20px 0;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .btn-mapa:hover, .btn-mapa1:hover {
+      background-color: #8a5ab7;
+    }
+
+    .division {
+      display: block;
+      width: 70%;
+      max-width: 200px;
+      margin: 10px auto;
+    }
+
+    .countdown {
+      font-size: 1.6em;
+      margin-top: 20px;
+    }
+
+    .button {
+      margin-top: 70px;
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #0e2f3a;
+      color: rgb(255, 215, 0);
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Portada con imagen -->
+  <div id="portada">
+    <img src="images/Portada.jpg" alt="Imagen de portada">
+  </div>
+
+  <!-- Audio Zelda -->
+  <audio id="introAudio" src="audio/zelda_intro.mp3"></audio>
+
+  <!-- Contenido principal -->
+  <div id="contenido">
+    <header>
+      <img src="images/Inicio.png" alt="Logo XV" class="logo">
+      <h1>Mis XV Años</h1>
+      <h2>Paulina Janeth</h2>
+    </header>
+
+    <img src="images/Espada.png" alt="Espada" class="imagen-arriba-info">
+
+    <div class="info">
+      <p>✨ Te invito a celebrar conmigo ✨</p>
+      <p>En un día muy especial</p>
+      <p><strong>Fecha:</strong> 19 de julio de 2025</p>
+      <p><strong>Hora:</strong> 6:00 PM</p>
+
+      <img src="images/Division.png" alt="Division 1" class="division">
+      <p>Acompáñame a dar gracias a Dios en la Parroquia de San José y Santo Tomás de Aquino</p>
+
+      <a href="https://www.google.com/maps/place/Parroquia+de+San+Jos%C3%A9+y+Santo+Tom%C3%A1s+de+Aquino/@20.6509627,-103.3205538,18z/" target="_blank" class="btn-mapa1">Ver en el mapa</a>
+
+      <img src="images/Division.png" alt="Division 2" class="division">
+      <p>Más tarde, bailemos un cumbión juntos</p>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=20.652810296842333,-103.31399378895281" target="_blank" class="btn-mapa">Ver el mapa</a>
+
+      <div class="countdown" id="countdown"></div>
+
+      <a class="button" href="https://forms.gle/tu-link-de-confirmacion" target="_blank">Confirmar Asistencia</a>
+    </div>
+
+    <footer>
+      Con cariño, la familia García Esquivel 💕
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Mostrar contenido al hacer clic en la portada
+    const portada = document.getElementById("portada");
+    const contenido = document.getElementById("contenido");
+    const audio = document.getElementById("introAudio");
+
+    portada.addEventListener("click", () => {
+      audio.play(); // Reproduce audio
+      portada.style.transition = "opacity 1s";
+      portada.style.opacity = 0;
+
+      setTimeout(() => {
+        portada.style.display = "none";
+        contenido.style.display = "block";
+        contenido.style.opacity = 0;
+        contenido.style.transition = "opacity 1s";
+        setTimeout(() => {
+          contenido.style.opacity = 1;
+        }, 10);
+      }, 1000);
+    });
+
+    // Cuenta regresiva
+    const eventDate = new Date("July 19, 2025 18:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "¡Ya comenzó la fiesta!";
+        clearInterval(countdownFunction);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
+    }, 1000);
+  </script>
+
+</body>
+</html>
