@@ -7,20 +7,45 @@
   <link rel="icon" type="image/png" href="images/Favicon.png">
 
   <style>
-  @font-face {
-    font-family: 'Triforce';
-    src: url('fonts/Triforce.ttf') format('truetype');
-  }
+    @font-face {
+      font-family: 'Triforce';
+      src: url('fonts/Triforce.ttf') format('truetype');
+    }
 
     body {
       margin: 0;
       font-family: 'Triforce', 'triforce';
       background-image: url('images/Fondo.png');
-      background-size: cover;       /* Para que cubra toda la pantalla */
-      background-position: center;  /* Para centrarla */
-      background-repeat: no-repeat; /* Para que no se repita */
-      color:#dbb21c;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #dbb21c;
       text-align: center;
+    }
+
+    /* Portada */
+    #portada {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      cursor: pointer;
+    }
+
+    #portada img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Contenido oculto al principio */
+    #contenido {
+      display: none;
     }
 
     header {
@@ -28,12 +53,11 @@
     }
 
     .logo {
-      width: 150px; /* puedes ajustar el tamaño */
+      width: 150px;
       max-width: 100%;
       margin-bottom: 0px;
     }
 
-    
     h1 {
       font-size: 4em;
       margin-bottom: 10px;
@@ -46,33 +70,28 @@
 
     .imagen-arriba-info {
       display: block;
-      margin-top: 10px;    /* margen superior */
-      margin-bottom: -118px; /* margen inferior */
-      margin-left: auto;   /* para centrar horizontalmente */
-      margin-right: auto;  /* para centrar horizontalmente */
+      margin-top: 10px;
+      margin-bottom: -118px;
+      margin-left: auto;
+      margin-right: auto;
       max-width: 100%;
       height: auto;
     }
-
 
     .info {
       margin: 40px auto;
       min-height: 1800px;
       max-width: 600px;
-      background-color: rgba(255, 255, 255, 0.2); /* blanco con opacidad al 20% */
+      background-color: rgba(255, 255, 255, 0.2);
       border-radius: 20px;
-      padding-top: 60px;    /* Aumenta el espacio en la parte superior */
-      padding-right: 30px;
-      padding-bottom: 30px;
-      padding-left: 30px;
+      padding: 60px 30px 30px 30px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      font-size: 30px;  /* Ajusta el tamaño del texto */
+      font-size: 30px;
     }
 
-        /* Estilo para el botón del mapa a recepción */
-    .btn-mapa {
+    .btn-mapa, .btn-mapa1 {
       display: inline-block;
-      background-color: #0e2f3a; /* Color de fondo verde */
+      background-color: #0e2f3a;
       color: rgb(255, 215, 0);
       padding: 10px 20px;
       margin: 20px 0;
@@ -80,33 +99,23 @@
       border-radius: 5px;
       text-align: center;
     }
-    .btn-mapa:hover {
-      background-color: #8a5ab7; /* Color de fondo verde más oscuro al pasar el cursor */
-    }
-    /* Estilo para el botón del mapa templo */
-    .btn-mapa1 {
-      display: inline-block;
-      background-color: #0e2f3a; /* Color de fondo verde */
-      color: rgb(255, 215, 0);
-      padding: 10px 20px;
-      margin: 20px 0;
-      text-decoration: none;
-      border-radius: 5px;
-      text-align: center;
-    }
-    .btn-mapa1:hover {
+
+    .btn-mapa:hover, .btn-mapa1:hover {
       background-color: #8a5ab7;
     }
+
     .division {
       display: block;
-      width: 70%; /* Ajusta el ancho según tus necesidades */
+      width: 70%;
       max-width: 200px;
-      margin: 10px auto; /* Espacio alrededor de la imagen */
+      margin: 10px auto;
     }
+
     .countdown {
       font-size: 1.6em;
       margin-top: 20px;
     }
+
     .button {
       margin-top: 70px;
       padding: 12px 24px;
@@ -118,6 +127,7 @@
       cursor: pointer;
       text-decoration: none;
     }
+
     footer {
       margin-top: 50px;
       padding: 20px;
@@ -127,46 +137,75 @@
 </head>
 <body>
 
-  <header>
-    <img src="images/Inicio.png" alt="Logo XV" class="logo">
-    <h1>Mis XV Años</h1>
-    <h2>Paulina Janeth</h2>
-  </header>
-  <img src="images/Espada.png" alt="Espada" class="imagen-arriba-info">
-  <div class="info">
-    <p>✨ Te invito a celebrar conmigo ✨</p>
-    <p> En un día muy especial </p>
-    <p><strong>Fecha:</strong> 19 de julio de 2025</p>
-    <p><strong>Hora:</strong> 6:00 PM</p>
-    <img src="images/Division.png" alt="Division 1" class="division">
-    <p>Acompañame a dar gracias a Dios en la Parroquia de San José y Santo Tomás de Aquino </p>
-
-    <!-- Ubicación de templo -->
-    <a href="https://www.google.com/maps/place/Parroquia+de+San+Jos%C3%A9+y+Santo+Tom%C3%A1s+de+Aquino/@20.6509627,-103.3205538,18z/data=!4m14!1m7!3m6!1s0x8428b2312f8cd0af:0x98b0cd758f122f16!2sParroquia+de+San+Jos%C3%A9+y+Santo+Tom%C3%A1s+de+Aquino!8m2!3d20.6510302!4d-103.3205811!16s%2Fg%2F1td9f1y3" target="_blank" class="btn-mapa1">
-      Ver en el mapa
-    </a>
-
-    <img src="images/Division.png" alt="Division 1" class="division">
-    <p>Más tarde, bailemos un cumbión juntos</p>
-    <!-- Ubicación de Recepción -->
-    <a href="https://www.google.com/maps/search/?api=1&query=20.652810296842333,-103.31399378895281" target="_blank" class="btn-mapa">
-      Ver el mapa
-    </a>
-
-    <div class="countdown" id="countdown"></div>
-
-    <a class="button" href="https://forms.gle/tu-link-de-confirmacion" target="_blank">
-      Confirmar Asistencia
-    </a>
+  <!-- Portada con imagen -->
+  <div id="portada">
+    <img src="images/Portada.jpg" alt="Imagen de portada">
   </div>
 
-  <footer>
-    Con cariño, la familia García Esquivel 💕
-  </footer>
+  <!-- Audio Zelda -->
+  <audio id="introAudio" src="audio/zelda_intro.mp3"></audio>
 
+  <!-- Contenido principal -->
+  <div id="contenido">
+    <header>
+      <img src="images/Inicio.png" alt="Logo XV" class="logo">
+      <h1>Mis XV Años</h1>
+      <h2>Paulina Janeth</h2>
+    </header>
+
+    <img src="images/Espada.png" alt="Espada" class="imagen-arriba-info">
+
+    <div class="info">
+      <p>✨ Te invito a celebrar conmigo ✨</p>
+      <p>En un día muy especial</p>
+      <p><strong>Fecha:</strong> 19 de julio de 2025</p>
+      <p><strong>Hora:</strong> 6:00 PM</p>
+
+      <img src="images/Division.png" alt="Division 1" class="division">
+      <p>Acompáñame a dar gracias a Dios en la Parroquia de San José y Santo Tomás de Aquino</p>
+
+      <a href="https://www.google.com/maps/place/Parroquia+de+San+Jos%C3%A9+y+Santo+Tom%C3%A1s+de+Aquino/@20.6509627,-103.3205538,18z/" target="_blank" class="btn-mapa1">Ver en el mapa</a>
+
+      <img src="images/Division.png" alt="Division 2" class="division">
+      <p>Más tarde, bailemos un cumbión juntos</p>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=20.652810296842333,-103.31399378895281" target="_blank" class="btn-mapa">Ver el mapa</a>
+
+      <div class="countdown" id="countdown"></div>
+
+      <a class="button" href="https://forms.gle/tu-link-de-confirmacion" target="_blank">Confirmar Asistencia</a>
+    </div>
+
+    <footer>
+      Con cariño, la familia García Esquivel 💕
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
   <script>
+    // Mostrar contenido al hacer clic en la portada
+    const portada = document.getElementById("portada");
+    const contenido = document.getElementById("contenido");
+    const audio = document.getElementById("introAudio");
+
+    portada.addEventListener("click", () => {
+      audio.play(); // Reproduce audio
+      portada.style.transition = "opacity 1s";
+      portada.style.opacity = 0;
+
+      setTimeout(() => {
+        portada.style.display = "none";
+        contenido.style.display = "block";
+        contenido.style.opacity = 0;
+        contenido.style.transition = "opacity 1s";
+        setTimeout(() => {
+          contenido.style.opacity = 1;
+        }, 10);
+      }, 1000);
+    });
+
     // Cuenta regresiva
-    const eventDate = new Date("july 19, 2025 18:00:00").getTime();
+    const eventDate = new Date("July 19, 2025 18:00:00").getTime();
 
     const countdownFunction = setInterval(() => {
       const now = new Date().getTime();
