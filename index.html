@@ -15,7 +15,10 @@
     body {
       margin: 0;
       font-family: 'Triforce', 'triforce';
-      background-color: black;
+      background-image: url('images/Fondo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: #dbb21c;
       text-align: center;
     }
@@ -27,12 +30,18 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('images/Portada.jpg');
-      background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
-      background-position: center center; /* Centra la imagen */
-      background-repeat: no-repeat;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       z-index: 9999;
       cursor: pointer;
+    }
+
+    #portada img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
     }
 
     /* Contenido oculto al principio */
@@ -167,7 +176,7 @@
 
   <!-- Portada con imagen -->
   <div id="portada">
-    <img src="images/Portada.jpg" alt="Imagen de portada" style="display: none;">
+    <img src="images/Portada.jpg" alt="Imagen de portada">
   </div>
 
   <!-- Audio Zelda -->
