@@ -263,40 +263,24 @@
         `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
     }, 1000);
 
-  document.addEventListener('DOMContentLoaded', () => {
-    if ('IntersectionObserver' in window) {
-      const animados = document.querySelectorAll('.animado');
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
+
+  </script>
+  <script>
+    const animados = document.querySelectorAll('.animado');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Solo una vez
+        }
       });
-
-      animados.forEach(el => observer.observe(el));
-    } else {
-      // Mostrar todo si no hay soporte para IntersectionObserver
-      document.querySelectorAll('.animado').forEach(el => el.classList.add('visible'));
-    }
-  });
-
-    setTimeout(() => {
-    contenido.style.opacity = 1;
-
-    // Forzar visibilidad de todos los elementos animados si no se han mostrado
-    animados.forEach(el => {
-      if (!el.classList.contains("visible")) {
-        el.classList.add("visible");
-      }
+    }, {
+      threshold: 0.1
     });
-  }, 10);
 
-
+    animados.forEach(el => observer.observe(el));
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
