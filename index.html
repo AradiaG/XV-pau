@@ -263,7 +263,8 @@
         `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
     }, 1000);
 
-    document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    if ('IntersectionObserver' in window) {
       const animados = document.querySelectorAll('.animado');
 
       const observer = new IntersectionObserver((entries) => {
@@ -278,7 +279,11 @@
       });
 
       animados.forEach(el => observer.observe(el));
-    });
+    } else {
+      // Mostrar todo si no hay soporte para IntersectionObserver
+      document.querySelectorAll('.animado').forEach(el => el.classList.add('visible'));
+    }
+  });
 
   </script>
 
