@@ -65,8 +65,10 @@
     min-width: 0;
     min-height: 0;
     margin-left: 0;
+    object-fit: cover;
+    object-position: left center; /* enfoca la izquierda de la imagen */
   }
-@media (max-width: 767px) {
+
   .izquierda {
     width: 50vw;
   }
