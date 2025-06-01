@@ -37,6 +37,7 @@
 .izquierda {
   width: 48vw;
   z-index: 1;
+  opacity: 0.98;
 }
 
 .derecha {
