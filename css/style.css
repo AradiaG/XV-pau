@@ -65,16 +65,16 @@
     min-width: 0;
     min-height: 0;
     margin-left: 0;
-    object-fit: contain;
+    object-fit: cover;
     object-position: left center; /* enfoca la izquierda de la imagen */
   }
 
   .izquierda {
-    width: 70vw;
+    width: 50vw;
   }
   .derecha {
-    width: 80vw;
-    margin-left: -2vw; /* aumenta el solape */
+    width: 50vw;
+    margin-left: -5vw; /* aumenta el solape */
     z-index: 2;
   }
 }
