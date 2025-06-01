@@ -1,28 +1,29 @@
-    @font-face {
-      font-family: 'Triforce';
-      src: url('../fonts/Triforce.ttf') format('truetype');
-    }
+@font-face {
+  font-family: 'Triforce';
+  src: url('../fonts/Triforce.ttf') format('truetype');
+}
 
-    body {
-      margin: 0;
-      font-family: 'Triforce', 'triforce';
-      background-image: url('../images/Fondo.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #dbb21c;
-      text-align: center;
-      font-size: 1rem;
-      overflow-x: hidden;
-    }
+body {
+  margin: 0;
+  font-family: 'Triforce', 'triforce';
+  background-image: url('../images/Fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #dbb21c;
+  text-align: center;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
 
+/* === PORTADA EFECTO CARTA === */
 #portada {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
   background: url('../images/Portada-izq.png') left center/cover no-repeat;
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   transition: background-position 3.2s cubic-bezier(0.77,0,0.175,1);
   background-position: -20vw center;
@@ -32,162 +33,153 @@
   background-position: -120vw center;
 }
 
-
-.portada-img {
+.portada-img.derecha {
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
-  transition: transform 3.2s cubic-bezier(0.77, 0, 0.175, 1);
   position: relative;
-}
-
-
-.derecha {
-  width: 54vw;
-  margin-left: -1vw;
   z-index: 2;
+  transition: transform 3.2s cubic-bezier(0.77, 0, 0.175, 1);
 }
-
 
 .derecha.cerrar {
   transform: translateX(100vw);
 }
 
 /* ----------- RESPONSIVE ----------- */
+@media (max-width: 1024px) {
+  .portada-img.derecha {
+    width: 110vw; /* asegúrate de cubrir todo en tablet */
+  }
+}
+
 @media (max-width: 767px) {
   #portada {
-    /* ¡Seguimos usando flex-row! */
-    flex-direction: row;
     width: 100vw;
     height: 100vh;
+    background-position: -25vw center;
   }
-  .portada-img {
-    width: 50vw;
+  .portada-img.derecha {
+    width: 120vw; /* cubre más en móvil */
     height: 100vh;
     min-width: 0;
     min-height: 0;
     margin-left: 0;
     object-fit: cover;
-    object-position: left center; /* enfoca la izquierda de la imagen */
-  }
-
-
-  }
-  .derecha {
-    width: 60vw;
-    margin-left: -5vw; /* aumenta el solape */
-    z-index: 2;
+    object-position: left center;
   }
 }
 
-    #contenido {
-      display: none;
-    }
+@media (max-width: 480px) {
+  .info {
+    font-size: 2rem;
+    padding: 80px 15px;
+  }
 
-    header {
-      padding: 60px 20px 20px;
-    }
+  h1, h2 {
+    font-size: 7vw;
+  }
 
-    .logo {
-      width: 150px;
-      max-width: 100%;
-      margin-bottom: 0;
-    }
+  .countdown {
+    font-size: 1rem;
+  }
 
-    h1 {
-      font-size: 6vw;
-      margin-bottom: 10px;
-    }
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
 
-    h2 {
-      font-size: 5vw;
-      margin-top: 10px;
-    }
+/* === RESTO DE TU DISEÑO === */
 
-    .imagen-arriba-info {
-      margin-top: 10px;
-      margin-bottom: -100px;
-    }
+#contenido {
+  display: none;
+}
 
-    .info {
-      margin: 40px auto;
-      width: 95%;
-      max-width: 600px;
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 40px 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      font-size: 1.2rem;
-    }
+header {
+  padding: 60px 20px 20px;
+}
 
-    .btn-mapa, .btn-mapa1, .button {
-      display: block;
-      background-color: #0e2f3a;
-      color: rgb(255, 215, 0);
-      padding: 10px 20px;
-      margin: 20px auto;
-      text-decoration: none;
-      border-radius: 5px;
-      text-align: center;
-      width: 100%;
-      max-width: 300px;
-      font-size: 1rem;
-    }
+.logo {
+  width: 150px;
+  max-width: 100%;
+  margin-bottom: 0;
+}
 
-    .btn-mapa:hover, .btn-mapa1:hover, .button:hover {
-      background-color: #8a5ab7;
-    }
+h1 {
+  font-size: 6vw;
+  margin-bottom: 10px;
+}
 
-    .division,
-    .iglesia,
-    .copas {
-      display: block;
-      max-width: 200px;
-      margin: 10px auto;
-    }
+h2 {
+  font-size: 5vw;
+  margin-top: 10px;
+}
 
-    .copas {
-      max-width: 110px;
-    }
+.imagen-arriba-info {
+  margin-top: 10px;
+  margin-bottom: -100px;
+}
 
-    .countdown {
-      font-size: 1.2rem;
-      margin-top: 20px;
-    }
+.info {
+  margin: 40px auto;
+  width: 95%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+}
 
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      font-size: 0.8rem;
-    }
+.btn-mapa, .btn-mapa1, .button {
+  display: block;
+  background-color: #0e2f3a;
+  color: rgb(255, 215, 0);
+  padding: 10px 20px;
+  margin: 20px auto;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+}
 
-    .animado {
-      opacity: 0;
-      transform: translateX(-100%);
-      transition: all 0.8s ease-out;
-    }
+.btn-mapa:hover, .btn-mapa1:hover, .button:hover {
+  background-color: #8a5ab7;
+}
 
-    .animado.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
+.division,
+.iglesia,
+.copas {
+  display: block;
+  max-width: 200px;
+  margin: 10px auto;
+}
 
+.copas {
+  max-width: 110px;
+}
 
-    @media (max-width: 480px) {
-      .info {
-        font-size: 2rem;
-        padding: 80px 15px;
-      }
+.countdown {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
 
-      h1, h2 {
-        font-size: 7vw;
-      }
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 0.8rem;
+}
 
-      .countdown {
-        font-size: 1rem;
-      }
+.animado {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.8s ease-out;
+}
 
-      .button {
-        padding: 10px 20px;
-        font-size: 1rem;
-      }
-    }
+.animado.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
