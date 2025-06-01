@@ -19,12 +19,13 @@
 #portada {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
-  background: #000;
+  background: url('images/Portada-izq.jpg') left center/cover no-repeat;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .portada-img {
   height: 100vh;
