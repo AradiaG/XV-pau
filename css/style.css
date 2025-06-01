@@ -70,8 +70,8 @@
     width: 46vw;
   }
   .derecha {
-    width: 56vw;
-    margin-left: -6vw; /* Un poco más de solape, ajusta al gusto */
+    width: 66vw;
+    margin-left: -8vw; /* Un poco más de solape, ajusta al gusto */
     z-index: 2;
   }
 }
