@@ -70,11 +70,11 @@
   }
 
   .izquierda {
-    width: 55vw;
+    width: 50vw;
   }
   .derecha {
-    width: 85vw;
-    margin-left: -8vw; /* aumenta el solape */
+    width: 60vw;
+    margin-left: -20vw; /* aumenta el solape */
     z-index: 2;
   }
 }
