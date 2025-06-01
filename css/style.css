@@ -16,70 +16,65 @@
       overflow-x: hidden;
     }
 
-    #portada {
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      background: #000;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+#portada {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: #000;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .portada-img {
-      height: 100vh;
-      object-fit: cover;
-      transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
-      position: relative;
-    }
+.portada-img {
+  height: 100vh;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
 
-    .izquierda {
-      width: 48vw;
-      z-index: 1;
-    }
+.izquierda {
+  width: 48vw;
+  z-index: 1;
+}
 
-    .derecha {
-      width: 54vw;
-      margin-left: -4vw;
-      z-index: 2;
-    }
+.derecha {
+  width: 54vw;
+  margin-left: -4vw;
+  z-index: 2;
+}
 
-    .izquierda.cerrar {
-      transform: translateX(-100vw);
-    }
-    .derecha.cerrar {
-      transform: translateX(100vw);
-    }
+.izquierda.cerrar {
+  transform: translateX(-100vw);
+}
+.derecha.cerrar {
+  transform: translateX(100vw);
+}
 
-    /* ----------- MODO RESPONSIVE PARA CELULAR ----------- */
-    @media (max-width: 767px) {
-      #portada {
-        flex-direction: column;      /* Las imágenes se apilan una encima de la otra */
-      }
-      .portada-img {
-        width: 100vw !important;
-        height: 50vh;
-        margin-left: 0 !important;
-        z-index: initial;
-      }
-      .izquierda {
-        width: 100vw !important;
-        height: 52vh;      /* Un poquito más alta para el solape */
-        z-index: 1;
-      }
-      .derecha {
-        width: 100vw !important;
-        height: 54vh;      /* Un poquito más alta y encima */
-        margin-top: -6vh;  /* Solapa sobre la de arriba */
-        z-index: 2;
-      }
-      .izquierda.cerrar {
-        transform: translateY(-100vh);
-      }
-      .derecha.cerrar {
-        transform: translateY(100vh);
-      }
-    }
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 767px) {
+  #portada {
+    /* ¡Seguimos usando flex-row! */
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+  }
+  .portada-img {
+    width: 50vw;
+    height: 100vh;
+    min-width: 0;
+    min-height: 0;
+    margin-left: 0;
+  }
+  .izquierda {
+    width: 46vw;
+  }
+  .derecha {
+    width: 56vw;
+    margin-left: -6vw; /* Un poco más de solape, ajusta al gusto */
+    z-index: 2;
+  }
+}
 
 
 
