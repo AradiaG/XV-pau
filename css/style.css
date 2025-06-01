@@ -74,7 +74,7 @@
   }
   .derecha {
     width: 60vw;
-    margin-left: -20vw; /* aumenta el solape */
+    margin-left: -2vw; /* aumenta el solape */
     z-index: 2;
   }
 }
