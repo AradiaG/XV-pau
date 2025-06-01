@@ -68,11 +68,11 @@
   }
 @media (max-width: 767px) {
   .izquierda {
-    width: 42vw;
+    width: 50vw;
   }
   .derecha {
-    width: 56vw;
-    margin-left: -2vw; /* aumenta el solape */
+    width: 53vw;
+    margin-left: -1vw; /* aumenta el solape */
     z-index: 2;
   }
 }
