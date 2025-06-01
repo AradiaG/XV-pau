@@ -5,12 +5,16 @@ const audio = document.getElementById("introAudio");
 
 document.querySelectorAll('#portada img').forEach(img => {
   img.addEventListener('click', function() {
+    // 1. Animar fondo
+    document.getElementById('portada').classList.add('cerrar-bg');
+    // 2. Animar portada de encima
     document.querySelector('.izquierda').classList.add('cerrar');
     document.querySelector('.derecha').classList.add('cerrar');
+    // 3. Ocultar portada y mostrar contenido después del efecto
     setTimeout(() => {
       document.getElementById('portada').style.display = 'none';
       document.getElementById('contenido').style.display = 'block';
-    }, 1200); // igual al tiempo de transición
+    }, 1200); // igual que el tiempo de la portada de encima
   });
 });
 
