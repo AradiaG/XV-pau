@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   transition: background-position 3.2s cubic-bezier(0.77,0,0.175,1);
-  background-position: left center;
+  background-position: -20vw center;
 }
 
 #portada.cerrar-bg {
