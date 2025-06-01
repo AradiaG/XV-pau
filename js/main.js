@@ -9,7 +9,7 @@ document.querySelector('#portada img').addEventListener('click', function() {
   setTimeout(() => {
     document.getElementById('portada').style.display = 'none';
     document.getElementById('contenido').style.display = 'block';
-  }, 3000);
+  }, 2000);
 });
 
 
