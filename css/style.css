@@ -19,13 +19,12 @@
 #portada {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
-  background: url('images/Portada-izq.jpg') left center/cover no-repeat;
+  background: #000;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .portada-img {
   height: 100vh;
@@ -54,12 +53,16 @@
 
 /* ----------- RESPONSIVE ----------- */
 @media (max-width: 767px) {
-  #portada {
-    /* ¡Seguimos usando flex-row! */
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
-  }
+#portada {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: url('images/Portada-izq.jpg') left center/cover no-repeat;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   .portada-img {
     width: 50vw;
     height: 100vh;
