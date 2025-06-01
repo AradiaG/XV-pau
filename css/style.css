@@ -33,25 +33,52 @@
       position: relative;
     }
 
-    /* Izquierda ocupa menos del 50% */
     .izquierda {
-      width: 50%;
+      width: 48vw;
       z-index: 1;
     }
 
-    /* Derecha ocupa más y solapa */
     .derecha {
-      width: 60vw;
-      margin-left: -11vw;    /* Solapa sobre la izquierda */
-      z-index: 305;           /* Está por encima */
+      width: 54vw;
+      margin-left: -4vw;
+      z-index: 2;
     }
 
-    /* Animaciones al abrir */
     .izquierda.cerrar {
       transform: translateX(-100vw);
     }
     .derecha.cerrar {
       transform: translateX(100vw);
+    }
+
+    /* ----------- MODO RESPONSIVE PARA CELULAR ----------- */
+    @media (max-width: 767px) {
+      #portada {
+        flex-direction: column;      /* Las imágenes se apilan una encima de la otra */
+      }
+      .portada-img {
+        width: 100vw !important;
+        height: 50vh;
+        margin-left: 0 !important;
+        z-index: initial;
+      }
+      .izquierda {
+        width: 100vw !important;
+        height: 52vh;      /* Un poquito más alta para el solape */
+        z-index: 1;
+      }
+      .derecha {
+        width: 100vw !important;
+        height: 54vh;      /* Un poquito más alta y encima */
+        margin-top: -6vh;  /* Solapa sobre la de arriba */
+        z-index: 2;
+      }
+      .izquierda.cerrar {
+        transform: translateY(-100vh);
+      }
+      .derecha.cerrar {
+        transform: translateY(100vh);
+      }
     }
 
 
