@@ -66,15 +66,17 @@
     min-height: 0;
     margin-left: 0;
   }
+@media (max-width: 767px) {
   .izquierda {
-    width: 46vw;
+    width: 42vw;
   }
   .derecha {
     width: 66vw;
-    margin-left: -8vw; /* Un poco más de solape, ajusta al gusto */
+    margin-left: -8vw; /* aumenta el solape */
     z-index: 2;
   }
 }
+
 
 
 
