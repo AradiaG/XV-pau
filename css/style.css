@@ -40,11 +40,6 @@
   position: relative;
 }
 
-.izquierda {
-  width: 48vw;
-  z-index: 1;
-  opacity: 0.98;
-}
 
 .derecha {
   width: 54vw;
@@ -52,9 +47,7 @@
   z-index: 2;
 }
 
-.izquierda.cerrar {
-  transform: translateX(-100vw);
-}
+
 .derecha.cerrar {
   transform: translateX(100vw);
 }
@@ -77,8 +70,7 @@
     object-position: left center; /* enfoca la izquierda de la imagen */
   }
 
-  .izquierda {
-    width: 50vw;
+
   }
   .derecha {
     width: 60vw;
