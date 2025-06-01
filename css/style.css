@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-position 0.8s cubic-bezier(0.77,0,0.175,1); /* velocidad del fondo */
+  transition: background-position 0.3s cubic-bezier(0.77,0,0.175,1); /* velocidad del fondo */
   background-position: left center;
 }
 
