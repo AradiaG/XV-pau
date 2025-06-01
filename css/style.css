@@ -53,16 +53,12 @@
 
 /* ----------- RESPONSIVE ----------- */
 @media (max-width: 767px) {
-#portada {
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: url('images/Portada-izq.jpg') left center/cover no-repeat;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+  #portada {
+    /* ¡Seguimos usando flex-row! */
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+  }
   .portada-img {
     width: 50vw;
     height: 100vh;
@@ -74,7 +70,7 @@
   }
 
   .izquierda {
-    width: 50vw;
+    width: 60vw;
   }
   .derecha {
     width: 70vw;
