@@ -176,7 +176,7 @@ h2 {
 .familia {
   display: block;
   max-width: 200px;
-  margin: 10px auto;
+  smargin: 10px auto;
 }
 
 .padrinos {
@@ -187,6 +187,18 @@ h2 {
 
 .copas {
   max-width: 110px;
+}
+
+.banquete {
+  display: block;
+  max-width: 100px;
+  margin: 10px auto;
+}
+
+.baile {
+  display: block;
+  max-width: 110px;
+  margin: 10px auto;
 }
 
 .countdown {
