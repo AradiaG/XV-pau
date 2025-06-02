@@ -16,6 +16,8 @@ document.querySelector('#portada img').addEventListener('click', function() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
         }
       });
     }, {
