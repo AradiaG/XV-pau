@@ -62,6 +62,6 @@ animados.forEach(el => {
         setTimeout(() => {
             el.classList.add('visible');
             observer.unobserve(el);
-        }, 2100); // Pequeño delay para forzar el efecto animado
+        }, 3000); // Pequeño delay para forzar el efecto animado
     }
 });
