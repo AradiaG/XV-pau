@@ -16,7 +16,6 @@ document.querySelector('#portada img').addEventListener('click', function() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Si quieres que solo anime 1 vez; si quieres repetir, elimina esta línea
         }
       });
     }, {
