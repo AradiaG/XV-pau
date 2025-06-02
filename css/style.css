@@ -90,7 +90,6 @@ body {
   }
 }
 
-/* === RESTO DE TU DISEÑO === */
 
 #contenido {
   opacity: 0;
@@ -181,19 +180,4 @@ footer {
   margin-top: 50px;
   padding: 20px;
   font-size: 0.8rem;
-}
-
-.animado {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: all 0.8s ease-out;
-}
-
-.animado.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.animado { 
-  opacity: 1 !important; transform: none !important; 
 }
