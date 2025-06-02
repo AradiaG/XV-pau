@@ -136,10 +136,16 @@ h2 {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   font-size: 1.2rem;
 }
+
 .margen-arriba {
   margin-top: 40px;  /* Ajusta el número al espacio que quieras */
 }
 
+.pau {
+  display: block;
+  max-width: 110px;
+  margin: 10px auto;
+}
 
 .btn-mapa, .btn-mapa1, .button {
   display: block;
@@ -175,7 +181,7 @@ h2 {
 
 .padrinos {
   display: block;
-  max-width: 120px;
+  max-width: 110px;
   margin: 10px auto;
 }
 
