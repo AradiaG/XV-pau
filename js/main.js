@@ -43,7 +43,9 @@ document.querySelector('#portada img').addEventListener('click', function() {
   }, 3000); // Cambia este tiempo según tu animación de carta (3s = 3000ms)
 });
 
+// ================== RESTO DE TU JS ===================
 
+// Cuenta regresiva
 const eventDate = new Date("July 19, 2025 18:00:00").getTime();
 const countdownFunction = setInterval(() => {
   const now = new Date().getTime();
@@ -63,4 +65,5 @@ const countdownFunction = setInterval(() => {
   document.getElementById("countdown").innerHTML =
     `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
 }, 1000);
+
 
