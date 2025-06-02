@@ -53,13 +53,16 @@ const observer = new IntersectionObserver((entries) => {
 animados.forEach(el => observer.observe(el));
 
 animados.forEach(el => {
-  // Si ya está visible (en el viewport), actívalo
   const rect = el.getBoundingClientRect();
   if (
     rect.top >= 0 &&
     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
   ) {
-    el.classList.add('visible');
-    observer.unobserve(el);
+    // Forzamos la animación usando setTimeout para el siguiente frame
+    setTimeout(() => {
+      el.classList.add('visible');
+      observer.unobserve(el);
+    }, 100); // Un retardo pequeño (100ms)
   }
 });
+
