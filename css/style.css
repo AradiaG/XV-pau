@@ -176,7 +176,7 @@ h2 {
 .familia {
   display: block;
   max-width: 200px;
-  smargin: 10px auto;
+  margin: 10px auto;
 }
 
 .padrinos {
