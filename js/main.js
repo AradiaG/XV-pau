@@ -4,19 +4,14 @@ const contenido = document.getElementById("contenido");
 const audio = document.getElementById("introAudio");
 
 document.querySelector('#portada img').addEventListener('click', function() {
-  document.getElementById('portada').classList.add('cerrar-bg');
+  portada.classList.add('cerrar-bg');
   document.querySelector('.derecha').classList.add('cerrar');
   setTimeout(() => {
-    document.getElementById('portada').style.display = 'none';
-    document.getElementById('contenido').style.display = 'block';
-  }, 2000);
+    // Muestra el contenido real y oculta la portada
+    contenido.classList.add('visible');
+    portada.style.display = 'none';
+  }, 2000); // El tiempo aquí debe ser igual al de la animación CSS (por ejemplo, 5s = 5000ms)
 });
-
-setTimeout(() => {
-  document.getElementById('portada').style.display = 'none';
-  document.getElementById('contenido').classList.add('visible');
-}, 5000); // tiempo igual al de tu animación
-
 
 
 const eventDate = new Date("July 19, 2025 18:00:00").getTime();
