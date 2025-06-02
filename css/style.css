@@ -189,11 +189,3 @@ footer {
   opacity: 1;
   transform: translateX(0);
 }
-
-.animado.animado-derecha {
-  transform: translateX(100%) !important;
-}
-.animado.animado-derecha.visible {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-}
