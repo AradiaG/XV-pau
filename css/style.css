@@ -189,3 +189,12 @@ footer {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Animado desde la derecha hacia la izquierda */
+.animado.animado-derecha {
+  transform: translateX(100%);
+}
+.animado.animado-derecha.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
