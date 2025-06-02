@@ -167,6 +167,18 @@ h2 {
   margin: 10px auto;
 }
 
+.familia {
+  display: block;
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+.padrinos {
+  display: block;
+  max-width: 120px;
+  margin: 10px auto;
+}
+
 .copas {
   max-width: 110px;
 }
