@@ -207,6 +207,12 @@ h2 {
   margin: 10px auto;
 }
 
+.amazon {
+  display: block;
+  max-width: 100px;
+  margin: 10px auto;
+}
+
 .countdown {
   font-size: 1.2rem;
   margin-top: 20px;
