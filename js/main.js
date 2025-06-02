@@ -12,6 +12,11 @@ document.querySelector('#portada img').addEventListener('click', function() {
   }, 2000);
 });
 
+setTimeout(() => {
+  document.getElementById('portada').style.display = 'none';
+  document.getElementById('contenido').classList.add('visible');
+}, 5000); // tiempo igual al de tu animación
+
 
 
 const eventDate = new Date("July 19, 2025 18:00:00").getTime();
