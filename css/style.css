@@ -193,3 +193,7 @@ footer {
   opacity: 1;
   transform: translateX(0);
 }
+
+.animado { 
+  opacity: 1 !important; transform: none !important; 
+}
