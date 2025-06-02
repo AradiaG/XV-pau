@@ -123,7 +123,7 @@ h2 {
 }
 
 .imagen-arriba-info {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: -100px;
 }
 
@@ -137,6 +137,10 @@ h2 {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   font-size: 1.2rem;
 }
+.margen-arriba {
+  margin-top: 40px;  /* Ajusta el número al espacio que quieras */
+}
+
 
 .btn-mapa, .btn-mapa1, .button {
   display: block;
