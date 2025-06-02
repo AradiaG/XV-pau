@@ -93,8 +93,12 @@ body {
 /* === RESTO DE TU DISEÑO === */
 
 #contenido {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s;
 }
+#contenido.visible {
+
 
 header {
   padding: 60px 20px 20px;
