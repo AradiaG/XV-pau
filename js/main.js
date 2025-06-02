@@ -10,26 +10,22 @@ document.querySelector('#portada img').addEventListener('click', function() {
     contenido.classList.add('visible');
     portada.style.display = 'none';
 
-    // === BLOQUE ANIMADO CORRECTO ===
-    const animados = document.querySelectorAll('.animado');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // Agrega o quita la clase .visible cuando entra/sale del viewport
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
-        }
+    // Espera 50 ms para asegurar el reflow del DOM y la visibilidad real de los textos
+    setTimeout(() => {
+      const animados = document.querySelectorAll('.animado');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, {
+        threshold: 0.1
       });
-    }, {
-      threshold: 0.1
-    });
-
-    // Observa todos los elementos animados SIEMPRE, no los desobserva nunca.
-    animados.forEach(el => observer.observe(el));
-
-    // Ya no es necesario el delay ni unobserve especial. El observer hará todo correctamente.
-    // === FIN BLOQUE ANIMADO ===
+      animados.forEach(el => observer.observe(el));
+    }, 50);
 
   }, 2000); // El tiempo aquí debe ser igual al de la animación CSS
 });
