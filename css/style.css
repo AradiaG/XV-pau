@@ -306,7 +306,7 @@ footer {
     width: 100%;
     height: 38vw;         /* altura relativa al ancho del viewport */
     min-height: 100px;
-    max-height: 180px;
+    max-height: 220px;
     margin: 0 auto;       /* centra la imagen */
     display: block;
   }
