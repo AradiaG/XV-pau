@@ -5,6 +5,8 @@ const audio = document.getElementById("introAudio");
 document.querySelector('#portada img').addEventListener('click', function() {
   portada.classList.add('cerrar-bg');
   document.querySelector('.derecha').classList.add('cerrar');
+  audio.currentTime = 0;
+  audio.play(); // 
   setTimeout(() => {
     // Muestra el contenido real y oculta la portada
     contenido.classList.add('visible');
