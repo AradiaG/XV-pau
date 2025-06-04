@@ -34,3 +34,32 @@ const countdownFunction = setInterval(() => {
   document.getElementById("countdown").innerHTML =
     `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
 }, 1000);
+
+// Carrusel personalizado Pau-Tazas
+const imagenesPersonal = [
+  "images/Pau.jpg",
+  "images/Tazas.png"
+];
+let actualPersonal = 0;
+
+function mostrarImagenPersonal(idx) {
+  actualPersonal = idx;
+  document.getElementById("carrusel-img-personal").src = imagenesPersonal[actualPersonal];
+  // Indicadores activos
+  let indicadores = document.querySelectorAll('.indicador-personal');
+  indicadores.forEach((el, i) => {
+    el.classList.toggle('active', i === actualPersonal);
+  });
+}
+
+function cambiarImagenPersonal(dir) {
+  actualPersonal += dir;
+  if (actualPersonal < 0) actualPersonal = imagenesPersonal.length - 1;
+  if (actualPersonal >= imagenesPersonal.length) actualPersonal = 0;
+  mostrarImagenPersonal(actualPersonal);
+}
+
+// Inicializa en la primera imagen cuando cargue el DOM
+document.addEventListener("DOMContentLoaded", function() {
+  mostrarImagenPersonal(0);
+});
