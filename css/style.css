@@ -302,18 +302,7 @@ footer {
     min-width: 0;
     margin: 10px auto;    /* centra el carrusel */
   }
-  .carrusel-foto-personal {
-    width: 100%;
-    height: 58vw;         /* altura relativa al ancho del viewport */
-    min-height: 100px;
-    max-height: 220px;
-    margin: 0 auto;       /* centra la imagen */
-    display: block;
-  }
-  .carrusel-controles-personal button {
-    font-size: 1.3em;     /* botones más pequeños en móvil */
-    padding: 0 10px;
-  }
+
   .carrusel-indicadores-personal {
     margin-top: 8px;
   }

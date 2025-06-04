@@ -35,12 +35,13 @@ const countdownFunction = setInterval(() => {
     `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
 }, 1000);
 
-// Carrusel personalizado Pau-Tazas
+// ==== Carrusel personalizado Pau-Tazas con AUTOPLAY ====
 const imagenesPersonal = [
   "images/Pau.jpg",
   "images/Tazas.png"
 ];
 let actualPersonal = 0;
+let timerPersonal = null;
 
 function mostrarImagenPersonal(idx) {
   actualPersonal = idx;
@@ -52,14 +53,22 @@ function mostrarImagenPersonal(idx) {
   });
 }
 
-function cambiarImagenPersonal(dir) {
-  actualPersonal += dir;
-  if (actualPersonal < 0) actualPersonal = imagenesPersonal.length - 1;
-  if (actualPersonal >= imagenesPersonal.length) actualPersonal = 0;
+function autoplayCarruselPersonal() {
+  actualPersonal = (actualPersonal + 1) % imagenesPersonal.length;
   mostrarImagenPersonal(actualPersonal);
 }
 
-// Inicializa en la primera imagen cuando cargue el DOM
+// Inicializa el carrusel y autoplay cuando cargue el DOM
 document.addEventListener("DOMContentLoaded", function() {
   mostrarImagenPersonal(0);
+  timerPersonal = setInterval(autoplayCarruselPersonal, 5000);
+
+  // Permite cambiar tocando los puntitos, y reinicia el temporizador
+  document.querySelectorAll('.indicador-personal').forEach((el, i) => {
+    el.onclick = function() {
+      mostrarImagenPersonal(i);
+      clearInterval(timerPersonal);
+      timerPersonal = setInterval(autoplayCarruselPersonal, 5000);
+    }
+  });
 });
