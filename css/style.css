@@ -301,6 +301,6 @@ footer {
   .carrusel-foto-personal {
     height: 40vw;
     min-height: 100px;
-    max-height: 240px;
+    max-height: 200px;
   }
 }
